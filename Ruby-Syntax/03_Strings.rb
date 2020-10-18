@@ -30,5 +30,8 @@ puts phrase.strip().index("wa")
 # call a method on a constant string, too
 puts "Holy Cow".upcase()
 
+# you don't need to do it but you can also call to_s on a string
+# and it won't hurt anything.  This allows you to accept 
+# a number or a string and concatenate it into a string output
 
 #THERE ARE A LOT OF METHODS FOR STRINGS
