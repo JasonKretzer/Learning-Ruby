@@ -6,12 +6,14 @@ Each folder represents what I wrote as part of watching different learning video
 
 ## Project Folders
 
-### Ruby-Syntax
+### _**Ruby-Syntax**_
 
 To pick up basic syntax of the language.  Based on the freeCodeCamp video by Mike Dane. <https://youtu.be/t_ispmWmdj>  
 
-### Simple-RoR-API
+### _**Simple-RoR-API**_
 
-To pick up the basics of setting up a REST endpoint using Ruby on Rails.  I documented the rails commands and some code in the README to help understanding.
+To pick up the basics of setting up a REST endpoint using Ruby on Rails.  I documented the rails commands and some code in the README to help understanding. Based on the video by Traversy Media. <https://www.youtube.com/watch?v=QojnRc7SS9o>
 
-### 
+### _**Ruby on Rails Crash Course**_
+
+I wanted a video to go through how the visual portion of rails and erb was used. This video covered it somewhat.  I finished the video but was not happy with the presentation.  I did learn about the basic testing and how to setup foreign keys in the models/db -- at least there was that. <https://www.youtube.com/watch?v=B3Fbujmgo60>
