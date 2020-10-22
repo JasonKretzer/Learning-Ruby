@@ -53,3 +53,17 @@ Also, make sure that libsqlite3-dev is installed before running the command.
 * To populate the database with the model you have to then run the created migration file.
 
       rails db:migrate
+
+* At a certain point in the video, he slogs through 45 minutes of Bulma css and fiddling with the views.  This would have been great if he had explained the rails pieces he was using. Skipping to adding a new controller.
+
+* Generate a controller called archive with an index method. This creates fewer items than the scaffold -- THANKFULLY.  The scaffold created a lot of cruft in my opinion.
+
+        rails g controller archive index
+
+* Skipped ahead to the basic testing that rails provides and how to call the tests via the commandline.
+
+        rails test test/controllers/entries_controller_test.rb:13
+
+* Skipped further to see how to set up foreign key constraints in the database. It is done similar to how EntityFramework is set up for .NET Core.  (Actually probably the reverse is more accurate.)
+
+I do not recommend this video for anything other than watching on high speed. Not much teaching, just a lot of code thrown at you.
