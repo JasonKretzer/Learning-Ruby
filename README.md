@@ -17,3 +17,7 @@ To pick up the basics of setting up a REST endpoint using Ruby on Rails.  I docu
 ### _**Ruby on Rails Crash Course**_
 
 I wanted a video to go through how the visual portion of rails and erb was used. This video covered it somewhat.  I finished the video but was not happy with the presentation.  I did learn about the basic testing and how to setup foreign keys in the models/db -- at least there was that. <https://www.youtube.com/watch?v=B3Fbujmgo60>
+
+### _**Udemy-CompleteRoRDevCourse**_
+
+Based on the Udemy Course "The Complete Ruby on Rails Developer Course" created by Rob Percival and Mashrur Hossain.  <https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/>
