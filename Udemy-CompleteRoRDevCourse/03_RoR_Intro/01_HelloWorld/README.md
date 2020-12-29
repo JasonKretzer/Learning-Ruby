@@ -12,7 +12,7 @@ If you installed Rubocop the way I did, please note that it does not like the wa
 
 line at the top of the files it makes.  So, if you open any of them and save Rubocop will flag it.
 
-Another thing Rubocop does with the generated files is to flag the first line with a warning about not having a carriage return at the end of the line.  To fix, I had to cut the contents of the file.  Delete the file.  Create the file. Paste the contents back into the file and save.
+**Windows Only** Another thing Rubocop does with the generated files is to flag the first line with a warning about not having a carriage return at the end of the line.  To fix, I had to cut the contents of the file.  Delete the file.  Create the file. Paste the contents back into the file and save.
 
 ## Application Creation
 
@@ -110,3 +110,11 @@ Now that the database migration is ready, we can run it using:
     rails db:migrate
 
 This command creates the sqlite database with the table in it as well as the schema.rb file.  
+
+During the scaffold, Rails creates a number of routes for you for the different CRUD operations. Rails puts the following line in your routes.rb file.
+
+    resources :articles
+
+To view all the routes run the following command.
+
+    rails routes --expanded
