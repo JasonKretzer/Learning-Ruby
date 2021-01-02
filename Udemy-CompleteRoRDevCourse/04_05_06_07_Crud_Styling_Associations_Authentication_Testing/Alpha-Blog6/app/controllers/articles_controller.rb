@@ -2,7 +2,9 @@
 
 # Controller for dealing with articles
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[show edit update destroy] # was this -> [:show, :edit, :update, :destroy]
+  before_action :set_article, only: %i[show edit update destroy]
+  # was this ->                       [:show, :edit, :update, :destroy]
+  # rubocop likes the %i format for this
 
   # GET /articles
   # GET /articles.json

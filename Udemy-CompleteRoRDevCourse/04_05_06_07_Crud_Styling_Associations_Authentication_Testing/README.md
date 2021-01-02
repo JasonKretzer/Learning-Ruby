@@ -116,3 +116,10 @@ Inside the form tags you can then set Then inside the form, you can reference my
     <%= form.text_field :title %>
 
 This creates a text field and a label for the text field.
+
+Back in the articles_controller when accepting parameters that come from a form you should whitelist what is being sent.  This is called "strong parameters" which is a security feature. You specify exactly what parameters you want to accept.
+
+    @article = Article.new(params.require(:article).permit(:title, :description))
+
+For more information,  I am using it as the FIRST place I look for information on forms.
+[https://guides.rubyonrails.org/form_helpers.html]
