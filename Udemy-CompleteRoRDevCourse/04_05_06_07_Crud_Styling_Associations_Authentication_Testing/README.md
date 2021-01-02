@@ -123,3 +123,78 @@ Back in the articles_controller when accepting parameters that come from a form 
 
 For more information,  I am using it as the FIRST place I look for information on forms.
 [https://guides.rubyonrails.org/form_helpers.html]
+
+---
+
+## Styling With Bootstrap
+
+### Notes About Javascript Before Starting
+
+First thing to note is that bootstrap does require jquery as a dependency.  In Rails 6 vs 5, javascript is handled differently. In 6, the javascript folder is located under /app. In 5, the folder is named javascripts and is located under /app/assets. The main reason it is this way is that in 6, javascript is handled by webpack via the webpacker gem.  In 5, rails used what is called the "asset pipeline" via sprockets which used the /app/assets folder format with javascripts under it.
+
+In the /app/views/layouts/application.html.erb file, this is the main layout file where other views and partials are rendered.  At the top there are two lines which show the application which link in the stylesheets and javascript file for the app so they are available on every page.
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+The default location for the stylesheets is /app/assets/stylesheets.  The default location for the top level javascript file, which pulls in all other javascript, is in /app/javascript/packs/application.js.
+
+### Installing Bootstrap for Rails 6
+
+A good blog article covers the steps at [https://www.mashrurhossain.com/blog/rails6bootstrap4]
+
+The basics are to
+
+1. Use yarn to add bootstrap, jquery, and popper.js to the app. Note the numbers after bootstrap@ are version numbers and will not represent the latest version.
+
+        yarn add bootstrap@4.3.1 jquery popper.js
+
+2. Add jquery and popper to teh /config/webpack/environment.js file.
+        const { environment } = require('@rails/webpacker')
+        const webpack = require("webpack")
+
+        environment.plugins.append("Provide", new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery',
+          Popper: ['popper.js', 'default']
+        }))
+
+        module.exports = environment
+
+3. Import bootstrap into the /app/javascript/packs/application.js file.
+
+        import "bootstrap"
+
+4. Add a bootstrap require to the /app/assets/stylesheets/application.css file. (Place above the other two require lines)
+
+        *= require bootstrap
+
+    **If you created some views via scaffolding, note that there is a /app/assets/stylesheets/scaffolds.scss that will interfere with bootstrap.**  I commented out several parts of the file to help with that.  You can probably delete the whole thing.
+
+5. Next, we can add a /app/assets/stylesheets/custom.css.scss file to override any of the bootstrap settings we wish. Simply add
+
+    @import 'bootstrap/dist/css/bootstrap';
+
+and you can take advantage of the "cascade" to override any bootstrap classes.
+
+### Installing Bootstrap for Rails 5
+
+Very similar to Rails 6.
+
+1. Install the bootstrap and jquery-rails gems by adding them to your Gemfile. (remember about the version numbers)
+
+        gem 'bootstrap', '~> 4.4.1'
+        gem 'jquery-rails'
+
+    and run bundle install.
+2. create a /app/assets/stylesheets/custom.css.scss file and import bootstrap.
+
+        @import "bootstrap";
+
+3. Add the require statements to /app/assets/javascripts/application.js file
+
+        //= require jquery3
+        //= require popper
+        //= require bootstrap
+
+You can then use your custom.css.scss to override any of the bootstrap styles.
