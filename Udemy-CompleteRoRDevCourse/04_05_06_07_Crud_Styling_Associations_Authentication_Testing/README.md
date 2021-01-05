@@ -198,3 +198,17 @@ Very similar to Rails 6.
         //= require bootstrap
 
 You can then use your custom.css.scss to override any of the bootstrap styles.
+
+---
+
+## Database Associations
+
+Ruby has its own syntax for database concepts.  The basics can be found at [https://guides.rubyonrails.org/association_basics.html].
+
+NOTE: watch your pluralization of field and table names.
+
+* **belongs_to**: a one directional 1:1 relationship. eg. 2 tables, Books and Authors. Books has an author_id so can identify who its author is. The Authors table does not keep a reference to their Books.
+
+* **has_one**: similar to belongs_to but goes in the other direction.
+
+* **has_many**:  similart to the has_one but is a one to many.
