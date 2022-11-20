@@ -8,7 +8,7 @@ Each folder represents what I wrote as part of watching different learning video
 
 ### _**Ruby-Syntax**_
 
-To pick up basic syntax of the language.  Based on the freeCodeCamp video by Mike Dane. <https://youtu.be/t_ispmWmdj>  
+To pick up basic syntax of the language.  Based on the freeCodeCamp video by Mike Dane. <https://www.youtube.com/watch?v=8wZ2ZD--VTk>  
 
 ### _**Simple-RoR-API**_
 
