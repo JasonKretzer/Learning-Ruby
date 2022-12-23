@@ -5,6 +5,8 @@ Based on the Udemy course by Boris Paskhaver
 
 A 7 hour introduction to rspec testing in Ruby.
 
-I am using the incomplete files from the course.  The instructor puts both code and tests in the same file.  I am splitting them out into a proper directory structure.  Since this is just plain Ruby, I will put source code in a lib folder (as opposed to an app folder if this was Ruby on Rails).
+I am using the incomplete files from the course.  The instructor puts both code and tests in the same file.  Not a great choice, but it works.
 
-I have tried to add more comments where appropriate to better explain what is being done in both code and spec files.
+I have tried to add more comments where appropriate to better explain what is being done in the spec files.
+
+As I go through the examples in the course, I change the name of the files to put them in numerical order.
