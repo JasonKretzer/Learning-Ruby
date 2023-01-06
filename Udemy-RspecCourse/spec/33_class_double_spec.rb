@@ -1,3 +1,7 @@
+# doubles for class methods -- self.build below
+# note the .as_stubbed_const method below.  This makes it so the class_double can
+# exist even if the actual class does not
+
 class Deck
   def self.build
     # Business logic to build a whole bunch of cards
